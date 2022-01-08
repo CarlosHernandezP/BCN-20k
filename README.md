@@ -14,7 +14,8 @@ Data pre-processing and training used for the BCN 20k scientific paper
 
 
 <hr>
-## Cropping
+
+# Cropping
 
 Following technique was used crop the dermatoscopies which with dark background:
 - [`preprocessing/image_cropper.py`](preprocessing/image_cropper.py):
