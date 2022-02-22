@@ -97,7 +97,8 @@ def crop_files(df : pd.DataFrame):
 if __name__=='__main__':
     
     parser = argparse.ArgumentParser(description='Configuration for dermatoscopy cropping')
-    parser.add_argument('--csv_dir', type=str, default=None, help = 'Path for the csv with the file locations')
+    parser.add_argument('--csv_dir', type=str, default=None, required=True,
+                        help='Path for the csv with the file locations')
     args = parser.parse_args()
    
     df = pd.read_csv(args.csv_dir)
