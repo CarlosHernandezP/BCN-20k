@@ -12,6 +12,7 @@ This repository gives access to the tools to train the models presented at the B
 The code for the cropping technique used on the dermatoscopies can be found at:
 - [`preprocessing/image_cropper.py`](preprocessing/image_cropper.py):
 
+The csv's with the image filename must be passed as a `--csv_dir` argument when executing the code.
 
 ![Original (a), (b) and (c) and cropped images (d), (e) and (f)](https://github.com/CarlosHernandezP/BCN-20k/blob/main/Cropped_uncropped_figure.png)
 
