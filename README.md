@@ -19,13 +19,17 @@ The csv's with the image filename must be passed as a `--csv_dir` argument when 
 
 <hr>
 
-# BCN-20k
-Data pre-processing and training used for the BCN 20k scientific paper
+## Training
+In order to train a model, one should set the model's name at [`utils/settings.yaml`](utils/settings.yaml) for on the following:
+| **Settings name** |      Model      |   
+|-------------------|-----------------|
+| res18             | ResNet 18       |  
+| res34             | ResNet 34       |  
+| res50             | ResNet 50       |   
+| effb0             | EfficientNet b0 |  
+| effb1             | EfficientNet b1 | 
+| effb2             | EfficientNet b2 
 
 
-
-<hr>
-
-
-
+In the same file you can change the proposed `learning_rate` and `regularization` values. The code will save a model everytime it surpasses the highest balanced accuracy of the validation set. The checkpoints are saved at `saved_models/`.
 <hr>
