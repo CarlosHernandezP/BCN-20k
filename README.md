@@ -20,7 +20,7 @@ The csv's with the image filename must be passed as a `--csv_dir` argument when 
 <hr>
 
 ## Training
-In order to train a model, one should set the model's name at [`utils/settings.yaml`](utils/settings.yaml) for on the following:
+In order to train a model, one should set the model's name at [`utils/settings.yaml`](utils/settings.yaml) for one of the following:
 | **Settings name** |      Model      |   
 |-------------------|-----------------|
 | res18             | ResNet 18       |  
