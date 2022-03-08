@@ -99,7 +99,9 @@ def supervised_training(dataloaders, model, device, train_tools, settings, num_e
             return 0 
 
 def update_best_model(acc_val, model, split, acc_train, classifier=None):
-    
+    if not os.path.exists('saved_models/'):
+        os.mkdir('saved_models/')
+        
     save_dir = 'saved_models/' + split 
     if not os.path.exists(save_dir):
         os.mkdir(save_dir)

@@ -15,13 +15,10 @@ def obtain_transform(settings : dict):
             size = 240
         elif 'b2' in settings['model_name']:
             size = 260
-        elif 'b3' in settings['model_name']:
-            size = 300
     else:
         size = 224
 
     train_transforms = transforms.Compose([
-    transforms.RandomRotation(180),
     transforms.RandomResizedCrop(
        size=size, scale=(0.8, 1.2), ratio=(0.9, 1.1)),
     transforms.ColorJitter(

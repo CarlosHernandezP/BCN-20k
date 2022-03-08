@@ -1,4 +1,5 @@
 import cv2
+import argparse
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
@@ -94,9 +95,13 @@ def crop_files(df : pd.DataFrame):
            continue
 
 if __name__=='__main__':
-    path_data = '' #insert where the .csv is located
-    csv_path = path_data+ '' # insert name of the csv
-    df = pd.read_csv(csv_path)
+    
+    parser = argparse.ArgumentParser(description='Configuration for dermatoscopy cropping')
+    parser.add_argument('--csv_dir', type=str, default=None, required=True,
+                        help='Path for the csv with the file locations')
+    args = parser.parse_args()
+   
+    df = pd.read_csv(args.csv_dir)
     crop_files(df)
 
 

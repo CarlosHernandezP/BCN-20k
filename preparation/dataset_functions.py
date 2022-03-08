@@ -1,10 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import StratifiedKFold, train_test_split
 
-# Path to the images
-path_data = '/home/carlos.hernandez/datasets/images/BCN_20k/'
 
-#path_bcn_20k_csv ='~/datasets/csvs/bcn_20k.csv'
 path_bcn_20k_csv ='~/datasets/csvs/data_bcn_20k.csv'
 
 replace_dict = {'NV':0, 'MEL':1, 'SCC':2, 'BKL':3, 'BCC':4, 'AK':5, 'DF':6, 'VASC':7}
@@ -32,7 +29,6 @@ def obtain_dataframe(settings : dict) -> pd.DataFrame:
     """
     df = pd.read_csv(path_bcn_20k_csv)
     df = df[df['split']=='train']
-#   df['filename'] = ['/home/carlos.hernandez/datasets/images/BCN_backup/'+x.split('/')[-1] for x in df['filename']]
     return df
 
 def get_data_cval(df: pd.DataFrame) -> list:
